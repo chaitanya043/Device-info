@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChoiceActivity">
+
+    <TextView
+        android:id="@+id/dev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/soft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/sense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensors"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/processor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proessor"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/battery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Battery"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/Apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Storage"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/accele"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer Sensor"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/mag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Magnetometer Sensor"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/gyr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope Sensor"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/z"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game Rotation Vector Sensor"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/y"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gravity Sensor"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Linear Acceleration Sensor"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rotation Vector Sensor"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orientation Sensor"
+        android:textSize="20sp"/>
+
+</LinearLayout>
