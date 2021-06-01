@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         model = findViewById(R.id.model);
         cpuabi = findViewById(R.id.CPUABI);
 
-        a = findViewById(R.id.a);
         b = findViewById(R.id.b);
         c = findViewById(R.id.c);
         d = findViewById(R.id.d);

@@ -5,33 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/purple_700"
     tools:context=".BatteryActivity">
 
-
     <TextView
-        android:id = "@+id/text"
-        android:textSize = "18sp"
-        android:text = "Battery percentage"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battery Info"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFD400"
+            android:padding="10dp">
+
+
+    <TextView
+        android:id = "@+id/text"
+        android:textSize = "21sp"
+        android:text = "Battery percentage : "
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
 
     <Button
         android:id="@+id/button"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Battery State"/>
+        android:text="Battery State"
+        android:background="@drawable/round"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="40dp"
+        />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFD400"
+            android:padding="10dp">
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text=""/>
+            android:text=""
+            android:textSize="21sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 

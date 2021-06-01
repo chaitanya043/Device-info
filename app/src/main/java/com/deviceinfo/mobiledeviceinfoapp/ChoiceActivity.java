@@ -1,15 +1,16 @@
 package com.deviceinfo.mobiledeviceinfoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 
-public class ChoiceActivity extends AppCompatActivity {
+public class    ChoiceActivity extends AppCompatActivity {
 
-    TextView dev,sense,processor,battery,apps,screen,soft,connec,accele,mag,gyr,z,y,x,u,v;
+    CardView dev,sense,processor,battery,apps,screen,soft,connec,accele,mag,gyr,z,y,x,u,v;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

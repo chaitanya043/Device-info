@@ -19,12 +19,13 @@ import android.content.BroadcastReceiver;
 
 public class BatteryActivity extends AppCompatActivity {
 
-    TextView text,text1;
+    TextView text, text1;
     IntentFilter intentfilter;
     int deviceStatus;
-    String currentBatteryStatus="Battery Info";
+    String currentBatteryStatus = "Battery Info";
     int batteryLevel;
     Button button;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,61 +49,60 @@ public class BatteryActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                BatteryActivity.this.registerReceiver(broadcastreceiver,intentfilter);
+                BatteryActivity.this.registerReceiver(broadcastreceiver, intentfilter);
 
             }
         });
 
     }
 
-        private BroadcastReceiver broadcastreceiver = new BroadcastReceiver() {
+    private BroadcastReceiver broadcastreceiver = new BroadcastReceiver() {
 
-            @Override
-            public void onReceive(Context context, Intent intent) {
+        @Override
+        public void onReceive(Context context, Intent intent) {
 
-                deviceStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS,-1);
-                int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-                int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-                int batteryLevel=(int)(((float)level / (float)scale) * 100.0f);
+            deviceStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+            int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+            int batteryLevel = (int) (((float) level / (float) scale) * 100.0f);
 
-                if(deviceStatus == BatteryManager.BATTERY_STATUS_CHARGING){
+            if (deviceStatus == BatteryManager.BATTERY_STATUS_CHARGING) {
 
-                    text1.setText(currentBatteryStatus+" = Charging at "+batteryLevel+" %");
+                text1.setText("  Charging at " + batteryLevel + " %");
 
-                }
+            }
 
-                if(deviceStatus == BatteryManager.BATTERY_STATUS_DISCHARGING){
+            if (deviceStatus == BatteryManager.BATTERY_STATUS_DISCHARGING) {
 
-                    text1.setText(currentBatteryStatus+" = Discharging at "+batteryLevel+" %");
+                text1.setText("  Discharging at " + batteryLevel + " %");
 
-                }
+            }
 
-                if (deviceStatus == BatteryManager.BATTERY_STATUS_FULL){
+            if (deviceStatus == BatteryManager.BATTERY_STATUS_FULL) {
 
-                    text1.setText(currentBatteryStatus+"= Battery Full at "+batteryLevel+" %");
+                text1.setText(" Battery Full at " + batteryLevel + " %");
 
-                }
+            }
 
-                if(deviceStatus == BatteryManager.BATTERY_STATUS_UNKNOWN){
+            if (deviceStatus == BatteryManager.BATTERY_STATUS_UNKNOWN) {
 
-                    text1.setText(currentBatteryStatus+" = Unknown at "+batteryLevel+" %");
-                }
+                text1.setText("  Unknown at " + batteryLevel + " %");
 
 
-                if (deviceStatus == BatteryManager.BATTERY_STATUS_NOT_CHARGING){
+                if (deviceStatus == BatteryManager.BATTERY_STATUS_NOT_CHARGING) {
 
-                    text1.setText(currentBatteryStatus+" = Not Charging at "+batteryLevel+" %");
+                    text1.setText("  Not Charging at " + batteryLevel + " %");
 
                 }
 
             }
-        };
-
-
-
-
-
         }
+
+    };
+
+
+
+}
 
 
 

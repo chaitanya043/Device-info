@@ -31,7 +31,6 @@ public class ScreenActivity extends AppCompatActivity {
         wid = findViewById(R.id.width);
         hei = findViewById(R.id.height);
         den = findViewById(R.id.density);
-        dendpi = findViewById(R.id.densitydpi);
 
 
         DisplayMetrics displayMetrics = new DisplayMetrics();

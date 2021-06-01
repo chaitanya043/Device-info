@@ -1,56 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/purple_700"
     tools:context=".OsActivity">
 
-    <TextView
-        android:id="@+id/a"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:orientation="vertical"
+        android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="System Info"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff4500"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#253529"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff4500"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/o"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#253529"
+            android:padding="10dp">
+
     <TextView
         android:id="@+id/c"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text=""
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff4500"
+            android:padding="10dp">
 
     <TextView
         android:id="@+id/d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text=""
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#253529"
+            android:padding="10dp">
+
     <TextView
         android:id="@+id/k"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text=""
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
 
-    <TextView
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff4500"
+            android:padding="10dp">
+
+
+        <TextView
         android:id="@+id/l"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text=""
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
 
-    <TextView
-        android:id="@+id/m"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/n"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
-    <TextView
-        android:id="@+id/o"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    </LinearLayout>
 
 
-</LinearLayout>
+
+
+</ScrollView>

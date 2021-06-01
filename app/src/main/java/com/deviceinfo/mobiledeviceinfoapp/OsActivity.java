@@ -15,7 +15,6 @@ public class OsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_os);
 
-        a = findViewById(R.id.a);
         c = findViewById(R.id.c);
         d = findViewById(R.id.d);
         k = findViewById(R.id.k);

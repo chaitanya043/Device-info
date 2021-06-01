@@ -2,36 +2,29 @@ package com.deviceinfo.mobiledeviceinfoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.accessibilityservice.AccessibilityService;
 import android.app.ActivityManager;
-import android.content.Context;
 
-import android.media.VolumeShaper;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.content.Intent;
-import android.net.Uri;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.Debug;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.StatFs;
 import android.text.format.Formatter;
-import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.File;
-import java.util.List;
+import java.text.DecimalFormat;
 
 
 public class NetworkActivity extends AppCompatActivity {
 
 TextView textView;
 TextView listView,listView1,listView2,listView3;
+private ProgressBar progressBar;
+    private int pStatus = 0;
+    private Handler handler = new Handler();
+    double i = 0;
+
 
 
 
@@ -45,6 +38,12 @@ TextView listView,listView1,listView2,listView3;
         listView1 = findViewById(R.id.list1);
         listView2 = findViewById(R.id.list2);
         listView3 = findViewById(R.id.list3);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+
+
+
 
 
 
@@ -74,13 +73,29 @@ TextView listView,listView1,listView2,listView3;
         listView3.setText("Total RAM : " +totalmeg +"MB");
 
 
+        double percentAvail = availableMegs / totalmeg * 100;
+        i = percentAvail;
 
-        double percentAvail = mi.availMem / (double)mi.totalMem * 100.0;
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // set the limitations for the numeric
+                // text under the progress bar
+                if  (i == (double) percentAvail) {
+                    //listView2.setText("" + percentAvail+"%");
+                    listView2.setText(new DecimalFormat("##.##").format(percentAvail)+"%");
 
-        listView2.setText("Availble percentage off totalMemory : " +percentAvail +"%");
 
+                    progressBar.setProgress((int) i);
+                    handler.postDelayed(this, 30);
+                } else {
+                    handler.removeCallbacks(this);
+                }
+            }
+        }, 200);
+    }
 
     }
 
 
-}
