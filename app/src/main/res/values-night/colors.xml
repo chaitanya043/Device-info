@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FF6200EE</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000</color>
+    <color name="Rlcolor">#FF03DAC5</color>
+    <color name="Batterybg">#64DD17</color>
+    <color name="Textcolor">#ffffff</color>
+    <color name="Background">#000</color>
+    <color name="Background1">#F86D02</color>
+    <color name="Background2">#E5FB04</color>
+
+
+
+
+</resources>

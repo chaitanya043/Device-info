@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Mobile device info app</string>
+    <string name="health">Cold</string>
+    <string name="health1">Dead</string>
+    <string name="health2">Good</string>
+    <string name="health3">Over Voltage</string>
+    <string name="health4">Over Heat</string>
+    <string name="health5">Unspecified failure</string>
+    <string name="health6">None</string>
+    <string name="health7">Wireless</string>
+    <string name="health8">USB</string>
+    <string name="health9">AC</string>
+    <string name="health10">None</string>
+    <string name="health11">Cold</string>
+    <string name="app_name1">Installed Apps List</string>
+    <string name="get_installed_apps">Get Installed Apps</string>
+
+
 </resources>

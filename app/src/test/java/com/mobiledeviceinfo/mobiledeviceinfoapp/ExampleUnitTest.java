@@ -1,4 +1,4 @@
-package com.deviceinfo.mobiledeviceinfoapp;
+package com.mobiledeviceinfo.mobiledeviceinfoapp;
 
 import org.junit.Test;
 

@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.deviceinfo.mobiledeviceinfoapp">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobiledeviceinfo.mobiledeviceinfoapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/splashimage"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/splashimage"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileDeviceInfoApp">
-        <activity android:name=".OrientationActivity"></activity>
-        <activity android:name=".RtvectorActivity" />
-        <activity android:name=".LinearActivity" />
-        <activity android:name=".GravityActivity" />
-        <activity android:name=".gamerotationActivity" />
-        <activity android:name=".GyroscopeActivity" />
-        <activity android:name=".MagActivity" />
-        <activity android:name=".acceleActivity" />
-        <activity android:name=".ConnectionActivity" />
-        <activity android:name=".OsActivity" />
-        <activity android:name=".ScreenActivity" />
-        <activity android:name=".NetworkActivity" />
-        <activity android:name=".BatteryActivity" />
-        <activity android:name=".Processoractivity" />
-        <activity android:name=".SensorActivity" />
-        <activity android:name=".ChoiceActivity">
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.InternetActivity"></activity>
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.OrientationActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.RtvectorActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.LinearActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.GravityActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.gamerotationActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.GyroscopeActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.MagActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.acceleActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.ConnectionActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.OsActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.ScreenActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.NetworkActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.BatteryActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.Processoractivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.SensorActivity" />
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.ChoiceActivity"></activity>
+        <activity android:name="com.mobiledeviceinfo.mobiledeviceinfoapp.MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7557609468922859~4793579684" />
     </application>
 
 </manifest>

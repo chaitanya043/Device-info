@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="15dp"
-    android:background="@color/purple_700"
+    android:background="@color/Background"
     tools:context=".acceleActivity">
 
     <TextView
@@ -17,8 +17,28 @@
         android:textAlignment="center"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:textColor="#000"
+        android:textColor="@color/Textcolor"
         android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A magnotometer is a sensor that measures the strength of the magnetic field around the phone from which the phone is able to obtain its absolute direction related to the earth's geo magnetic field."
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/Textcolor"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move or tilt your mobile to observe axes"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/Textcolor"/>
 
 
 
@@ -51,5 +71,27 @@
         </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7557609468922859/4602007997">
+
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
 
 </LinearLayout>

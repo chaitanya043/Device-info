@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_700"
+    android:background="@color/Background"
     tools:context=".NetworkActivity">
 
     <LinearLayout
@@ -17,9 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Storage Info"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#000"/>
+        android:textColor="@color/Textcolor"/>
 
 
 
@@ -35,7 +35,7 @@
             android:text="Available RAM : "
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="#000"/>
+            android:textColor="@color/Textcolor"/>
 
 
         <ProgressBar
@@ -60,7 +60,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:gravity="center_horizontal"
         android:textSize="30sp"
-        android:textColor="#000"
+        android:textColor="@color/Textcolor"
         android:textStyle="bold"/>
 
 
@@ -91,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#ffffff"/>
 
@@ -117,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#ffffff"/>
         </RelativeLayout>
@@ -140,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#ffffff"/>
 
@@ -166,14 +166,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="#ffffff"/>
         </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-7557609468922859/4602007997">
+
+
+
+            </com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+
     </LinearLayout>
+
 
 
 

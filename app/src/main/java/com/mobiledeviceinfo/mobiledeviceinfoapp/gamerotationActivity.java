@@ -1,4 +1,4 @@
-package com.deviceinfo.mobiledeviceinfoapp;
+package com.mobiledeviceinfo.mobiledeviceinfoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,33 +10,49 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.util.List;
 
-public class GravityActivity extends AppCompatActivity {
+public class gamerotationActivity extends AppCompatActivity {
 
     SensorManager sm = null;
-    TextView textView5 = null;
+    TextView textView4 = null;
     List list;
     SensorEventListener sel;
-
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gravity);
+        setContentView(R.layout.activity_gamerotation);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         sel = new SensorEventListener(){
             public void onAccuracyChanged(Sensor sensor, int accuracy) {}
             public void onSensorChanged(SensorEvent event) {
                 float[] values = event.values;
-                textView5.setText("x: "+values[0]+"\ny: "+values[1]+"\nz: "+values[2]);
+                textView4.setText("x: "+values[0]+"\ny: "+values[1]+"\nz: "+values[2]);
             }
         };
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
 
-        textView5 = (TextView)findViewById(R.id.tve);
+        textView4 = (TextView)findViewById(R.id.tvd);
 
-        list = sm.getSensorList(Sensor.TYPE_GRAVITY);
+        list = sm.getSensorList(Sensor.TYPE_GAME_ROTATION_VECTOR);
         if(list.size()>0){
             sm.registerListener(sel, (Sensor) list.get(0), SensorManager.SENSOR_DELAY_NORMAL);
         }else{

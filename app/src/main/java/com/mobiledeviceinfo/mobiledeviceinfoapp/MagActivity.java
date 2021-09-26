@@ -1,4 +1,4 @@
-package com.deviceinfo.mobiledeviceinfoapp;
+package com.mobiledeviceinfo.mobiledeviceinfoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,34 +10,49 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.util.List;
 
-public class acceleActivity extends AppCompatActivity {
+public class MagActivity extends AppCompatActivity {
 
     SensorManager sm = null;
-    TextView textView1 = null;
+    TextView textView2 = null;
     List list;
     SensorEventListener sel;
-
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accele);
+        setContentView(R.layout.activity_mag);
 
-            sel = new SensorEventListener(){
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        sel = new SensorEventListener(){
             public void onAccuracyChanged(Sensor sensor, int accuracy) {}
             public void onSensorChanged(SensorEvent event) {
                 float[] values = event.values;
-                textView1.setText("x: "+values[0]+"\ny: "+values[1]+"\nz: "+values[2]);
+                textView2.setText("x: "+values[0]+"\ny: "+values[1]+"\nz: "+values[2]);
             }
         };
-
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
 
-        textView1 = (TextView)findViewById(R.id.tva);
+        textView2 = (TextView)findViewById(R.id.tvb);
 
-        list = sm.getSensorList(Sensor.TYPE_ACCELEROMETER);
+        list = sm.getSensorList(Sensor.TYPE_MAGNETIC_FIELD);
         if(list.size()>0){
             sm.registerListener(sel, (Sensor) list.get(0), SensorManager.SENSOR_DELAY_NORMAL);
         }else{

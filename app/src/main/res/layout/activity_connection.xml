@@ -6,21 +6,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
-    android:background="@color/purple_700"
+    android:background="@color/Background"
     tools:context=".ConnectionActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connection Info"
+        android:text="Installed Apps Info"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:textColor="#000"/>
+        android:textColor="@color/Textcolor"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/Textcolor"
+            android:layout_gravity="center_horizontal" />
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/dev"
@@ -29,25 +38,54 @@
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
 
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFD400"
+                android:padding="10dp">
+
+
+                <ListView
+                    android:id="@+id/conetinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#A52A2A"
-            android:padding="10dp">
+            android:layout_height="wrap_content"
+            >
 
-            <TextView
-                android:id="@+id/conetinfo"
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="21sp"
-                android:textStyle="bold"
-                android:textColor="#ffffff"/>
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-7557609468922859/4602007997">
 
+            </com.google.android.gms.ads.AdView>
 
         </RelativeLayout>
 
-        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
-
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/purple_700"
+    android:background="@color/Background"
     tools:context=".ChoiceActivity">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:text="Device Info"
             android:textSize="35sp"
             android:textStyle="bold"
-            android:textColor="#000"/>
+            android:textColor="@color/Textcolor"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,6 +135,42 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ininfo"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#808080"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Network Info"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:maxHeight="100dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/c" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/processor"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -150,7 +186,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proessor"
+        android:text="Processor"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -290,7 +326,7 @@
             <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Connection"
+        android:text="Installed \nApps"
         android:textSize="30sp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -302,7 +338,7 @@
                     android:layout_height="100dp"
                     android:maxHeight="100dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/connection"/>
+                    android:src="@drawable/apps"/>
 
             </RelativeLayout>
 
@@ -324,8 +360,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Accelerometer
-        Sensor"
+        android:text="Accelerometer \nSensor"
         android:textSize="30sp"
         android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -359,8 +394,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Magnetometer
-        Sensor"
+        android:text="Magnetometer \nSensor"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -428,8 +462,7 @@
             <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Game Rotation
-        Vector Sensor"
+        android:text="Game Rotation \nVector Sensor"
         android:textSize="30sp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -463,7 +496,7 @@
             <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gravity Sensor"
+        android:text="Gravity \nSensor"
         android:textSize="25sp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -497,8 +530,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Linear
-        Acceleration Sensor"
+        android:text="Linear \nAcceleration Sensor"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -533,7 +565,7 @@
             <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rotation Vector \nSensor"
+        android:text="Rotation \nVector Sensor"
         android:textSize="25sp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
@@ -567,8 +599,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Orientation
-        Sensor"
+        android:text="Orientation \nSensor"
         android:textSize="30sp"
 
         android:textColor="#ffffff"

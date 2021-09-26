@@ -1,4 +1,4 @@
-package com.deviceinfo.mobiledeviceinfoapp;
+package com.mobiledeviceinfo.mobiledeviceinfoapp;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
